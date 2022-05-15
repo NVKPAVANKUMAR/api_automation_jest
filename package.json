@@ -1,0 +1,28 @@
+{
+    "name": "api_automation",
+    "version": "1.0.0",
+    "description": "api automation with supertest, jest and chai",
+    "main": "index.js",
+    "scripts": {
+        "qa": "export ENV=qa || set ENV=qa  && jest --testResultsProcessor=jest-stare",
+        "local": "set ENV=qa && jest --testResultsProcessor=jest-stare"
+    },
+    "jest-stare": {
+        "log": false,
+        "resultHtml": "api_automation_report.html",
+        "reportTitle": "api_automation_report",
+        "reportHeadline": "reqres_api",
+        "coverageLink": "./coverage/lcov-report/index.html"
+    },
+    "keywords": [],
+    "author": "NVK PAVANKUMAR",
+    "license": "ISC",
+    "dependencies": {
+        "chai": "^4.3.6",
+        "chai-json-schema": "^1.5.1",
+        "jest": "^27.0.6",
+        "moment": "^2.29.1",
+        "supertest": "^6.1.3",
+        "jest-stare": "^2.4.1"
+    }
+}
